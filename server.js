@@ -8,11 +8,12 @@ const port = process.env.PORT || 3000
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs')
 app.use(express.static(__dirname + '/public'))
-app.use((req, res, next) => { //call on next to run the server.
-  res.render('maintanance.hbs', {
-    header: 'Maintanance'
-  })
-})
+
+// app.use((req, res, next) => { //call on next to run the server.
+//   res.render('maintanance.hbs', {
+//     header: 'Maintanance'
+//   })
+// })
 
 hbs.registerHelper('getFullYear', () => {
   return new Date().getFullYear()
